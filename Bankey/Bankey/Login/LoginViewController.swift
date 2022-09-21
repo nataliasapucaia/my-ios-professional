@@ -33,6 +33,13 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
 
+    //animation
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen:CGFloat = -1000
+
+    var bankeyLeadingAnchor: NSLayoutConstraint?
+    var descriptionLeadingAnchor: NSLayoutConstraint?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +51,12 @@ class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
         signInButton.configuration?.showsActivityIndicator = false
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        animate()
+    }
 }
 
 extension LoginViewController {
@@ -54,12 +67,14 @@ extension LoginViewController {
         bankeyLabel.text = "Bankey"
         bankeyLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         bankeyLabel.textAlignment = .center
+        bankeyLabel.alpha = 0
 
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.text = "Your premium source for all\nthings banking!"
         descriptionLabel.textAlignment = .center
         descriptionLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         descriptionLabel.numberOfLines = 0
+        descriptionLabel.alpha = 0
 
 
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -88,11 +103,9 @@ extension LoginViewController {
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
 
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: descriptionLabel.bottomAnchor, multiplier: 3),
-            descriptionLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
 
             descriptionLabel.topAnchor.constraint(equalToSystemSpacingBelow: bankeyLabel.bottomAnchor, multiplier: 3),
-            bankeyLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             bankeyLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
 
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
@@ -103,6 +116,11 @@ extension LoginViewController {
             errorMessageLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             errorMessageLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
         ])
+
+        bankeyLeadingAnchor = bankeyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        bankeyLeadingAnchor?.isActive = true
+        descriptionLeadingAnchor = descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        descriptionLeadingAnchor?.isActive = true
     }
 }
 
@@ -138,6 +156,38 @@ extension LoginViewController {
     private func configureView(withMessage message: String) {
         errorMessageLabel.isHidden = false
         errorMessageLabel.text = message
+    }
+}
+
+// MARK: - Animations
+
+extension LoginViewController {
+    private func animate() {
+        let duration = 2.0
+
+        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+        self.bankeyLeadingAnchor?.constant = self.leadingEdgeOnScreen
+        self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+
+        let animator2 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+        self.descriptionLeadingAnchor?.constant = self.leadingEdgeOnScreen
+        self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 1)
+
+        let animator3 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.bankeyLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator3.startAnimation(afterDelay: 1)
+
+        let animator4 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.descriptionLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator4.startAnimation(afterDelay: 1)
     }
 }
 
