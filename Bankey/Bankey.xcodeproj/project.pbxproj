@@ -28,6 +28,8 @@
 		D1C3818B28D9D208002E280B /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3818A28D9D208002E280B /* NSNotificationName.swift */; };
 		D1C3818D28D9D713002E280B /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3818C28D9D713002E280B /* UITextField+SecureToggle.swift */; };
 		D1C3819028DC94EB002E280B /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3818F28DC94EB002E280B /* ShakeyBellView.swift */; };
+		D1C3819228DCED6E002E280B /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3819128DCED6E002E280B /* Date+Utils.swift */; };
+		D1C3819428DCEE45002E280B /* AccountSummaryViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3819328DCEE45002E280B /* AccountSummaryViewController+Network.swift */; };
 		D1E59F2928B6E1EE00D7BEE3 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E59F2828B6E1ED00D7BEE3 /* DummyViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		D1C3818A28D9D208002E280B /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		D1C3818C28D9D713002E280B /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		D1C3818F28DC94EB002E280B /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		D1C3819128DCED6E002E280B /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		D1C3819328DCEE45002E280B /* AccountSummaryViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Network.swift"; sourceTree = "<group>"; };
 		D1E59F2828B6E1ED00D7BEE3 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +100,7 @@
 				D1C3817928D6148F002E280B /* CurrencyFormatter.swift */,
 				D1C3818A28D9D208002E280B /* NSNotificationName.swift */,
 				D1C3818C28D9D713002E280B /* UITextField+SecureToggle.swift */,
+				D1C3819128DCED6E002E280B /* Date+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D15F13A028D0AD7700A6E1A1 /* AccountSummaryViewController.swift */,
+				D1C3819328DCEE45002E280B /* AccountSummaryViewController+Network.swift */,
 				D1C3817328D0E81B002E280B /* Header */,
 				D1C3817428D0E835002E280B /* Cells */,
 			);
@@ -308,12 +314,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1528D9A28C664F200E68D94 /* UIViewController+Utils.swift in Sources */,
+				D1C3819228DCED6E002E280B /* Date+Utils.swift in Sources */,
 				D167694328A15F4400C1DAAC /* LoginView.swift in Sources */,
 				D1528D9828C6363800E68D94 /* LocalState.swift in Sources */,
 				D15F13A328D0B15E00A6E1A1 /* AccountSummaryHeaderView.swift in Sources */,
 				D1C3818D28D9D713002E280B /* UITextField+SecureToggle.swift in Sources */,
 				D1E59F2928B6E1EE00D7BEE3 /* DummyViewController.swift in Sources */,
 				D1C3817A28D6148F002E280B /* CurrencyFormatter.swift in Sources */,
+				D1C3819428DCEE45002E280B /* AccountSummaryViewController+Network.swift in Sources */,
 				D1C3817828D613FA002E280B /* DecimalUtils.swift in Sources */,
 				D1C3818B28D9D208002E280B /* NSNotificationName.swift in Sources */,
 				D167693128A15C9800C1DAAC /* LoginViewController.swift in Sources */,
