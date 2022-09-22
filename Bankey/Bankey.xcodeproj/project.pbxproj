@@ -27,6 +27,7 @@
 		D1C3818928D62D48002E280B /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3818828D62D48002E280B /* CurrencyFormatterTests.swift */; };
 		D1C3818B28D9D208002E280B /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3818A28D9D208002E280B /* NSNotificationName.swift */; };
 		D1C3818D28D9D713002E280B /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3818C28D9D713002E280B /* UITextField+SecureToggle.swift */; };
+		D1C3819028DC94EB002E280B /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3818F28DC94EB002E280B /* ShakeyBellView.swift */; };
 		D1E59F2928B6E1EE00D7BEE3 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E59F2828B6E1ED00D7BEE3 /* DummyViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		D1C3818828D62D48002E280B /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		D1C3818A28D9D208002E280B /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		D1C3818C28D9D713002E280B /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
+		D1C3818F28DC94EB002E280B /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		D1E59F2828B6E1ED00D7BEE3 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 		D167692B28A15C9800C1DAAC /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				D1C3818E28DC9465002E280B /* Components */,
 				D167692C28A15C9800C1DAAC /* AppDelegate.swift */,
 				D167694128A15EFA00C1DAAC /* Login */,
 				D167694A28A1A64800C1DAAC /* Onboarding */,
@@ -193,6 +196,14 @@
 				D1C3818828D62D48002E280B /* CurrencyFormatterTests.swift */,
 			);
 			path = BankeyUnitTests;
+			sourceTree = "<group>";
+		};
+		D1C3818E28DC9465002E280B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D1C3818F28DC94EB002E280B /* ShakeyBellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				D1C3817828D613FA002E280B /* DecimalUtils.swift in Sources */,
 				D1C3818B28D9D208002E280B /* NSNotificationName.swift in Sources */,
 				D167693128A15C9800C1DAAC /* LoginViewController.swift in Sources */,
+				D1C3819028DC94EB002E280B /* ShakeyBellView.swift in Sources */,
 				D1C3817628D0E863002E280B /* AccountSummaryCell.swift in Sources */,
 				D167694C28A2E62D00C1DAAC /* OnboardingViewController.swift in Sources */,
 				D1528D9C28C669C100E68D94 /* MainViewController.swift in Sources */,
