@@ -10,6 +10,8 @@
 		D1528D9828C6363800E68D94 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1528D9728C6363800E68D94 /* LocalState.swift */; };
 		D1528D9A28C664F200E68D94 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1528D9928C664F200E68D94 /* UIViewController+Utils.swift */; };
 		D1528D9C28C669C100E68D94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1528D9B28C669C100E68D94 /* MainViewController.swift */; };
+		D154BFA628F5F39700898DB3 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D154BFA528F5F39700898DB3 /* ProfileManager.swift */; };
+		D154BFA828F5FD1C00898DB3 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D154BFA728F5FD1C00898DB3 /* AccountSummaryViewControllerTests.swift */; };
 		D15F13A128D0AD7700A6E1A1 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F13A028D0AD7700A6E1A1 /* AccountSummaryViewController.swift */; };
 		D15F13A328D0B15E00A6E1A1 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F13A228D0B15E00A6E1A1 /* AccountSummaryHeaderView.swift */; };
 		D15F13A528D0B18C00A6E1A1 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15F13A428D0B18C00A6E1A1 /* AccountSummaryHeaderView.xib */; };
@@ -51,6 +53,8 @@
 		D1528D9728C6363800E68D94 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		D1528D9928C664F200E68D94 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		D1528D9B28C669C100E68D94 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D154BFA528F5F39700898DB3 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		D154BFA728F5FD1C00898DB3 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		D15F13A028D0AD7700A6E1A1 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		D15F13A228D0B15E00A6E1A1 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		D15F13A428D0B18C00A6E1A1 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
@@ -113,6 +117,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		D154BFA428F5F2AD00898DB3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D154BFA528F5F39700898DB3 /* ProfileManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D15F139F28D0AD1E00A6E1A1 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +132,7 @@
 				D1C3819328DCEE45002E280B /* AccountSummaryViewController+Network.swift */,
 				D1C3817328D0E81B002E280B /* Header */,
 				D1C3817428D0E835002E280B /* Cells */,
+				D154BFA428F5F2AD00898DB3 /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -236,6 +249,7 @@
 			children = (
 				D1C3819728DD0492002E280B /* ProfileTests.swift */,
 				D1C3819928DD055B002E280B /* AccountTests.swift */,
+				D154BFA728F5FD1C00898DB3 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -344,6 +358,7 @@
 				D1528D9A28C664F200E68D94 /* UIViewController+Utils.swift in Sources */,
 				D1C3819E28DF75BF002E280B /* SkeletonCell.swift in Sources */,
 				D1C3819228DCED6E002E280B /* Date+Utils.swift in Sources */,
+				D154BFA628F5F39700898DB3 /* ProfileManager.swift in Sources */,
 				D167694328A15F4400C1DAAC /* LoginView.swift in Sources */,
 				D1528D9828C6363800E68D94 /* LocalState.swift in Sources */,
 				D15F13A328D0B15E00A6E1A1 /* AccountSummaryHeaderView.swift in Sources */,
@@ -369,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D154BFA828F5FD1C00898DB3 /* AccountSummaryViewControllerTests.swift in Sources */,
 				D1C3819828DD0492002E280B /* ProfileTests.swift in Sources */,
 				D1C3819A28DD055B002E280B /* AccountTests.swift in Sources */,
 				D1C3818228D62A15002E280B /* BankeyUnitTests.swift in Sources */,
